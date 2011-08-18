@@ -1,0 +1,9 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[user]
+	name = John Hyland
+	email = jhyland@damballa.com
+[core]
+  excludesfile = /Users/jhyland/.gitignore

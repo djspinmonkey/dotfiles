@@ -1,0 +1,15 @@
+#require "autotest/rails"
+require "autotest/growl"
+require "autotest/fsevent"
+require "autotest/restart"
+#require "redgreen/autotest"
+
+Autotest::Growl::clear_terminal = false
+Autotest::Growl::image_dir = File.join(ENV['HOME'], "misc/autotest_pics/john")
+
+Autotest.add_hook :initialize do |autotest|
+  %w{.git .svn .hg .DS_Store ._* vendor tmp log doc sample_tests}.each do |exception|
+    autotest.add_exception(exception)
+  end
+end
+
