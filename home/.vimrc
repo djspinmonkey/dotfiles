@@ -27,10 +27,6 @@ set vb            " turn on the visual beep (screen flash instead of actual beep
 set autowrite     " write before calling an external file - good for spellchecking
 set bg=dark       " assume there's a dark background, regardless of $TERM
 
-" At some point, I should get a nice unified colorscheme
-highlight Normal guifg=white guibg=black  " I typically roll with white-on-black text.
-syntax on     " syntax highliting - must have!
-
 " how to 'open' a URL - Mac-specific!
 :command -bar -nargs=1 OpenURL :!open <args>
 
@@ -77,8 +73,18 @@ autocmd BufRead *.erb  set filetype=eruby
 autocmd BufRead *.rjs  set filetype=ruby
 autocmd BufRead Capfile set filetype=ruby
 
-" set up efm_perl.pl so that we can use vim's quickfix mode for perl
-autocmd BufRead *.pl set makeprg=$HOME/bin/efm_perl.pl\ -c\ %\ $*
-autocmd BufRead *.pm set makeprg=$HOME/bin/efm_perl.pl\ -c\ %\ $*
-autocmd BufRead *.pl set errorformat=%f:%l:%m
-autocmd BufRead *.pm set errorformat=%f:%l:%m
+" Gui vim configurations
+if has("gui_running")
+  set guioptions=aegmR
+  set guifont=Menlo:h12
+  highlight Normal guifg=white guibg=black  " I typically roll with white-on-black text.
+endif
+
+" syntax highliting - must have!
+syntax on
+
+" Show trailing whitespace - apparently some people care
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLEave * redraw!
