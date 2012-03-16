@@ -45,6 +45,7 @@ map <leader>m :execute 'Rmodel'<CR>
 map <leader>v :execute 'Rview'<CR>
 map <leader>c :execute 'Rcontroller'<CR>
 map <leader>u :execute 'Runittest'<CR>
+map <leader>f :execute 'Rfunctionaltest'<CR>
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
