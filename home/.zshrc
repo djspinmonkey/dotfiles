@@ -25,6 +25,10 @@ plugins=( osx vi-mode )
 
 source $ZSH/oh-my-zsh.sh
 
+# Holy crap zsh's vi mode sucks.  Fix at least the backspace behavior.  :-(
+zle -A .backward-kill-word vi-backward-kill-word
+zle -A .backward-delete-char vi-backward-delete-char
+
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
