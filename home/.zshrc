@@ -29,6 +29,9 @@ source $ZSH/oh-my-zsh.sh
 zle -A .backward-kill-word vi-backward-kill-word
 zle -A .backward-delete-char vi-backward-delete-char
 
+# Fuck me sideways autocorrect is annoying. No, zsh, I did NOT mean "spec".
+unsetopt correct_all
+
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
