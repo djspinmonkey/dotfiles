@@ -24,6 +24,7 @@ ZSH_THEME="robbyrussell"
 plugins=( osx vi-mode )
 
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 # Holy crap zsh's vi mode sucks.  Fix at least the backspace behavior.  :-(
 zle -A .backward-kill-word vi-backward-kill-word
