@@ -38,6 +38,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
 alias vi='mvim'
+alias be='bundle exec' # BLEAGH!  :-(
 
 export MANPATH=$MANPATH:/usr/share/man:/usr/local/man:/opt/local/share/man:/usr/local/share/man
 export PATH=$HOME/bin:/opt/local/bin:/usr/local/bin:/opt/local/sbin:$PATH
