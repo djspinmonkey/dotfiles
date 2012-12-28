@@ -30,6 +30,9 @@ unsetopt correct_all
 zle -A .backward-kill-word vi-backward-kill-word
 zle -A .backward-delete-char vi-backward-delete-char
 
+# Fuck me sideways autocorrect is annoying. No, zsh, I did NOT mean "spec".
+unsetopt correct_all
+
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
@@ -39,6 +42,7 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias rm='rm -i'
 alias vi='mvim'
+alias be='bundle exec' # BLEAGH!  :-(
 
 export MANPATH=$MANPATH:/usr/share/man:/usr/local/man:/opt/local/share/man:/usr/local/share/man
 export PATH=$HOME/bin:/opt/local/bin:/usr/local/bin:/opt/local/sbin:$PATH

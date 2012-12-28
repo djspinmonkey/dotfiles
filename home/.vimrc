@@ -5,7 +5,7 @@
 set nocompatible
 
 " load extra bundles (eg, coffescript support is installed this way)
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
 
 " Change the leader character to comma, since it's easier to reach than backspace
 let mapleader = ","
@@ -51,11 +51,6 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
-" ruby autotest integration
-"compiler ruby         " Enable compiler support for ruby
-compiler rubyunit
-nmap <Leader>fd :cf /tmp/autotest.txt<cr> :compiler rubyunit<cr>
-
 " Make p in Visual mode replace the selected text with the "" register.
 vnoremap p <Esc>:let current_reg = @"<CR>gvdi<C-R>=current_reg<CR><Esc>
 
@@ -88,4 +83,4 @@ syntax on
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLEave * redraw!
+autocmd InsertLeave * redraw!
