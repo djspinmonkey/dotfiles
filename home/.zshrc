@@ -12,8 +12,9 @@ zle -A .backward-delete-char vi-backward-delete-char
 unsetopt correct_all
 
 # Howsabout some chruby?
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 chruby ruby-1.9
-source /usr/local/share/chruby/auto.sh
 
 # Aliases. Aka, this stuff here.
 alias mv='mv -i'
