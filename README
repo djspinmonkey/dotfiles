@@ -5,6 +5,7 @@ mkdir ~/src/
 
 # Install some basic necessities
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+brew install ack
 brew install git
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 

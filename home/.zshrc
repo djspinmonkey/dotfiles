@@ -8,8 +8,9 @@ source $ZSH/oh-my-zsh.sh
 zle -A .backward-kill-word vi-backward-kill-word
 zle -A .backward-delete-char vi-backward-delete-char
 
-# ZOMG, zsh, no I did NOT mean "spec".
+# ZOMG, zsh, no I did NOT mean "spec".  And stop borking my history!
 unsetopt correct_all
+unsetopt share_history
 
 # Howsabout some chruby?
 source /usr/local/opt/chruby/share/chruby/chruby.sh
@@ -25,8 +26,8 @@ alias be='bundle exec' # Kinda wish "bundle exec" wasn't even a thing, but since
 
 # Export all the things.
 export MANPATH=$MANPATH:/usr/share/man:/usr/local/man:/opt/local/share/man:/usr/local/share/man
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
-export PATH=$HOME/bin:/opt/local/bin:/usr/local/bin:/opt/local/sbin:$PATH
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export PATH=$PATH:$HOME/bin:/opt/local/bin:/usr/local/bin:/opt/local/sbin
 export EDITOR='vim'
 export CFLAGS="-arch x86_64"
 export ARCHFLAGS="-arch x86_64"

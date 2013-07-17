@@ -26,6 +26,7 @@ set nohlsearch    " turn off search hiliting
 set vb            " turn on the visual beep (screen flash instead of actual beep)
 set autowrite     " write before calling an external file - good for spellchecking
 set bg=dark       " assume there's a dark background, regardless of $TERM
+set number        " display line numbers
 
 " how to 'open' a URL - Mac-specific!
 :command -bar -nargs=1 OpenURL :!open <args>
