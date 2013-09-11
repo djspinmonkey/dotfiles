@@ -23,6 +23,7 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias vi='mvim'
 alias be='bundle exec' # Kinda wish "bundle exec" wasn't even a thing, but since it is....
+alias ruby-install='ruby-install --src-dir ~/.ruby-sources/'
 
 # Export all the things.
 export MANPATH=$MANPATH:/usr/share/man:/usr/local/man:/opt/local/share/man:/usr/local/share/man
