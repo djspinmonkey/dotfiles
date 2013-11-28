@@ -26,6 +26,7 @@ set nohlsearch    " turn off search hiliting
 set vb            " turn on the visual beep (screen flash instead of actual beep)
 set autowrite     " write before calling an external file - good for spellchecking
 set bg=dark       " assume there's a dark background, regardless of $TERM
+set number        " display line numbers
 
 " how to 'open' a URL - Mac-specific!
 :command -bar -nargs=1 OpenURL :!open <args>
@@ -80,7 +81,10 @@ endif
 syntax on
 
 " Show trailing whitespace - apparently some people care
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * redraw!
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
