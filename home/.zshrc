@@ -53,3 +53,6 @@ export CFLAGS="-arch x86_64"
 export ARCHFLAGS="-arch x86_64"
 export PGDATA='/usr/local/var/postgres'
 export NODE_PATH=/usr/local/lib/node
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
