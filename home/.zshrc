@@ -3,6 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=( vi-mode )
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 # Fix zsh's vi-mode backspace behavior.  :-(
 zle -A .backward-kill-word vi-backward-kill-word
@@ -36,3 +37,6 @@ export ARCHFLAGS="-arch x86_64"
 # The places I usually put the stuff.
 export PGDATA='/usr/local/var/postgres'
 export NODE_PATH=/usr/local/lib/node
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

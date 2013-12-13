@@ -2,12 +2,15 @@
 require "autotest/growl"
 require "autotest/fsevent"
 require "autotest/restart"
-#require "redgreen/autotest"
 
-Autotest::Growl::clear_terminal = false
+custom_images = File.join(ENV['HOME'], "misc/autotest_pics/emily")
+if Dir.exist? custom_images
+  Autotest::Growl::image_dir = custom_images
+else
+  puts "OH NOES I CANNAE FIND YOUR SILLY AUTOTEST PIX!!"
+end
 
-custom_images = File.join(ENV['HOME'], "misc/autotest_pics/john")
-Autotest::Growl::image_dir = custom_images if Dir.exist? custom_images
+#Autotest::Growl::clear_terminal = false
 
 Autotest.add_hook :initialize do |autotest|
   %w{.git .svn .hg .DS_Store ._* vendor tmp log doc sample_tests}.each do |exception|
