@@ -7,3 +7,5 @@
 	email = jhyland@damballa.com
 [core]
   excludesfile = /Users/jhyland/.gitignore
+[push]
+	default = simple
