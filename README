@@ -7,12 +7,14 @@ mkdir ~/src/
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 brew install ack
 brew install git
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+brew install fish
+sudo echo '/usr/local/bin/fish' >> /etc/shells
 
 # Set up some rubies and related utilities
 brew install https://raw.github.com/postmodern/ruby-install/master/homebrew/ruby-install.rb
 ruby-install ruby 1.9
 ruby-install ruby 2.0
+ruby-install ruby 2.1
 brew install chruby
 
 # Clone dotfiles
