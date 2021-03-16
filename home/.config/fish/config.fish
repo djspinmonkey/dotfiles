@@ -1,4 +1,4 @@
-source ~/.config/fish/vi-mode.fish
+# source ~/.config/fish/vi-mode.fish
 source ~/.config/fish/fish_prompt.fish
 
 set fish_greeting ''
@@ -8,7 +8,9 @@ set EDITOR vim
 alias vi "mvim"
 alias be "bundle exec"
 
+fish_vi_key_bindings
+
 function fish_user_key_bindings
-  vi_mode_insert
+  # fish_vi_key_bindings
 end
 
