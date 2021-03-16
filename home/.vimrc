@@ -73,7 +73,7 @@ autocmd BufRead Capfile set filetype=ruby
 " Gui vim configurations
 if has("gui_running")
   set guioptions=aegmR
-  set guifont=Source_Code_Pro:h14
+  set guifont=Source_Code_Pro:h18
   highlight Normal guifg=white guibg=black  " I typically roll with white-on-black text.
 endif
 
