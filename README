@@ -5,19 +5,14 @@ mkdir ~/src/
 
 # Install some basic necessities
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-brew install ack
+brew install the_silver_searcher
 brew install git
-brew install fish
-sudo echo '/usr/local/bin/fish' >> /etc/shells
-
-# Set up some rubies and related utilities
-brew install https://raw.github.com/postmodern/ruby-install/master/homebrew/ruby-install.rb
-ruby-install ruby 1.9
-ruby-install ruby 2.0
-ruby-install ruby 2.1
-brew install chruby
+brew install macvim
+brew install fish         # add to /etc/shells
+brew install chruby       # follow post-install directions
+brew install ruby-install # maybe install some current rubies?
 
 # Clone dotfiles
-gem install homesick
+sudo gem install homesick
 homesick clone djspinmonkey/dotfiles
 homesick symlink djspinmonkey/dotfiles
